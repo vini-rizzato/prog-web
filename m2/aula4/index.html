@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM</title>
+</head>
+<body>
+
+    <main>
+        <form>
+            <label for="name">Nome</label>
+            <input type="text" name="name" minlength="5">
+
+            <label for="email">Email</label>
+            <input type="email" name="email">
+
+            <label for="datanasc">Data de nascimento</label>
+            <input type="date" name="datanasc">
+
+            <label for="cpf">CPF</label>
+            <input type="text" pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" name="cpf">
+            
+            <select name="curso" id="curso">
+                <option value="ads">Ads</option>
+                <option value="gpi">Gpi</option>
+                <option value="comex">Comex</option>
+            </select>
+
+            <label for="opcao_radio">Manhã</label>
+            <input type="radio" name="opcao_radio" value="Manhã">
+            <label for="opcao_radio">Noite</label>
+            <input type="radio" name="opcao_radio" value="Noite">
+            
+            <label for="programou">Ja programou antes?</label>
+            <input type="checkbox" name="programou">
+
+            <label for="obs">Observações</label>
+            <textarea name="obs" id="obs"></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+
+</body>
+</html>

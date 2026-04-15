@@ -1,0 +1,13 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4rem;
+    margin: 4rem;
+}
+
+h1, h2, h3, h4, h5, a {
+    color: red;
+}
+
+td {
+    border-color: blue;
+}

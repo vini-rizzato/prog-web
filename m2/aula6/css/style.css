@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    padding: 4rem;
+    margin: 4rem;
+}
+
+h1, h2, h3, h4, h5, a {
+    color: red;
+}
+
+td {
+    border-color: blue;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.card {
+    display: inline-block;
+    padding: 1rem;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 1rem;
+}
