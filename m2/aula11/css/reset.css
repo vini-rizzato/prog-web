@@ -1,0 +1,28 @@
+/* Reset e base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Cores */
+  --cor-primaria: #6366f1;
+  --cor-fundo: #0f172a;
+  --cor-texto: #e2e8f0;
+  --cor-texto-suave: #94a3b8;
+
+  /* Espaçamento */
+  --espaco: 16px;
+  --espaco-lg: 32px;
+
+  /* Tipografia */
+  --fonte: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--fonte);
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+}
