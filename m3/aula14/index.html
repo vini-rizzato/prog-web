@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Produtos</title>
+<style>
+  .card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+  }
+</style>
+</head>
+<body>
+
+<button id="filtro">Mostrar só eletrônicos</button>
+<button id="limpar">Limpar</button>
+
+<div id="container"></div>
+
+<script>
+const produtos = [
+  { nome: "Notebook", preco: 3500, categoria: "eletrônicos" },
+  { nome: "Celular", preco: 2000, categoria: "eletrônicos" },
+  { nome: "Mesa", preco: 800, categoria: "móveis" },
+  { nome: "Cadeira", preco: 300, categoria: "móveis" },
+  { nome: "Fone", preco: 150, categoria: "eletrônicos" }
+]
+
+const container = document.getElementById("container")
+
+function renderProdutos(lista) {
+  container.innerHTML = ""
+  lista.forEach(produto => {
+    const div = document.createElement("div")
+    div.classList.add("card")
+    div.classList.add(produto.categoria)
+
+    div.innerHTML = `
+      <p>${produto.nome}</p>
+      <p>R$ ${produto.preco}</p>
+      <p>${produto.categoria}</p>
+    `
+
+    container.appendChild(div)
+  })
+}
+
+renderProdutos(produtos)
+
+document.getElementById("filtro").addEventListener("click", () => {
+  document.querySelectorAll(".card").forEach(card => {
+    if (!card.classList.contains("eletrônicos")) {
+      card.classList.toggle("hide")
+      card.style.display = card.style.display === "none" ? "block" : "none"
+    }
+  })
+})
+
+document.getElementById("limpar").addEventListener("click", () => {
+  container.innerHTML = ""
+})
+</script>
+
+</body>
+</html>
